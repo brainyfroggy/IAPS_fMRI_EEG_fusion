@@ -1,0 +1,33 @@
+name: neuro
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy=1.25.*
+  - scipy=1.11.*
+  - pandas=2.2.*
+  - matplotlib=3.8.*
+  - seaborn=0.12.*
+  - scikit-learn=1.2.*
+  - jupyterlab=4.2.*
+  - notebook=6.5.*
+  - ipykernel
+  - tqdm
+  - statsmodels
+  - pillow
+  - nibabel=5.0.*
+  - nilearn=0.10.*
+  - mne=1.4.*
+  - pip
+  - pip:
+    - importlib-metadata==6.8.0
+
+# Notes:
+# - These package versions are chosen to be recent, stable releases compatible with Python 3.10.
+# - If your notebook requires additional, specialized packages (e.g., BrainIAK, custom compiled libs), add them under `pip:` or as conda-forge packages.
+# - To create the environment locally (PowerShell), run:
+#     conda env create -f "C:\Users\yujunchen\OneDrive - University of Florida\BME departmental\manuscript\data\eeg\environment.yml"
+# - Activate with:
+#     conda activate iaps_eeg_rsa
+# - Then in VS Code, select the `iaps_eeg_rsa` Python interpreter / kernel for Jupyter notebooks.
